@@ -1,0 +1,755 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "mental intake assistant",
+            "intents": [
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "WelcomeIntent",
+                    "slots": [],
+                    "samples": []
+                },
+                {
+                    "name": "QuestionsIntent",
+                    "slots": [
+                        {
+                            "name": "FriendsAnyFriends",
+                            "type": "PositiveNegative",
+                            "samples": [
+                                "{FriendsAnyFriends} I do have them",
+                                "{FriendsAnyFriends} I do have a few that are close to me",
+                                "{FriendsAnyFriends} so much",
+                                "{FriendsAnyFriends}",
+                                "{FriendsAnyFriends} not a lot",
+                                "{FriendsAnyFriends} I have many",
+                                "{FriendsAnyFriends} a lot ",
+                                "{FriendsAnyFriends} I {FriendsAnyFriends}",
+                                "I {FriendsAnyFriends}",
+                                "{FriendsAnyFriends} have friends",
+                                "{FriendsAnyFriends} have any friends",
+                                "{FriendsAnyFriends} I think so"
+                            ]
+                        },
+                        {
+                            "name": "FriendsTimeWithFriends",
+                            "type": "PositiveNegative",
+                            "samples": [
+                                "I {FriendsTimeWithFriends}",
+                                "{FriendsTimeWithFriends} I {FriendsTimeWithFriends}",
+                                "{FriendsTimeWithFriends} so much",
+                                "{FriendsTimeWithFriends}",
+                                "{FriendsTimeWithFriends} No I don't spend a lot of time with them",
+                                "{FriendsTimeWithFriends} I spend a lot of time with them",
+                                "{FriendsTimeWithFriends} quite much",
+                                "{FriendsTimeWithFriends} not really",
+                                "{FriendsTimeWithFriends} I don't have friends",
+                                "{FriendsTimeWithFriends} not quite",
+                                "{FriendsTimeWithFriends} not many",
+                                "{FriendsTimeWithFriends} not much",
+                                "{FriendsTimeWithFriends} a lot"
+                            ]
+                        },
+                        {
+                            "name": "FriendsSocialGroup",
+                            "type": "PositiveNegative",
+                            "samples": [
+                                "{FriendsSocialGroup} at least I think they do",
+                                "{FriendsSocialGroup} so much",
+                                "{FriendsSocialGroup}",
+                                "{FriendsSocialGroup} they do",
+                                "{FriendsSocialGroup} I {FriendsSocialGroup} get influenced by them",
+                                "They {FriendsSocialGroup}",
+                                "{FriendsSocialGroup} I think so"
+                            ]
+                        },
+                        {
+                            "name": "FriendsSocialGroupBrPositive",
+                            "type": "AMAZON.SearchQuery"
+                        },
+                        {
+                            "name": "FriendsAnyFriendsBrNegative",
+                            "type": "AMAZON.SearchQuery"
+                        },
+                        {
+                            "name": "FriendsTimeWithFriendsBrNegative",
+                            "type": "AMAZON.SearchQuery"
+                        },
+                        {
+                            "name": "FriendsTimeWithFriendsBrPositive",
+                            "type": "AMAZON.SearchQuery"
+                        },
+                        {
+                            "name": "FriendsSocialGroupBrPositiveTwo",
+                            "type": "AMAZON.SearchQuery"
+                        },
+                        {
+                            "name": "WorkSociallySafe",
+                            "type": "Scales",
+                            "samples": [
+                                "I would give it a {WorkSociallySafe}",
+                                "{WorkSociallySafe} because I feel very safe",
+                                "{WorkSociallySafe} because I don't feel safe",
+                                "I do not feel socially safe {WorkSociallySafe}",
+                                "I don't feel socially safe {WorkSociallySafe}",
+                                "I feel socially safe {WorkSociallySafe}",
+                                "I think about a {WorkSociallySafe}",
+                                "About a {WorkSociallySafe}",
+                                "I feel about a {WorkSociallySafe}",
+                                "{WorkSociallySafe}"
+                            ]
+                        },
+                        {
+                            "name": "WorkCurrentWork",
+                            "type": "Scales",
+                            "samples": [
+                                "I would give it a {WorkCurrentWork}",
+                                "{WorkCurrentWork} because I don't like my study",
+                                "{WorkCurrentWork} I don't like it",
+                                "{WorkCurrentWork} because I like my study a lot",
+                                "{WorkCurrentWork} I like my study a lot",
+                                "I feel about a {WorkCurrentWork}",
+                                "About a {WorkCurrentWork}",
+                                "I think about a {WorkCurrentWork}",
+                                "{WorkCurrentWork}"
+                            ]
+                        },
+                        {
+                            "name": "WorkWorkInTeam",
+                            "type": "PositiveNegativeWorkTeam",
+                            "samples": [
+                                "Being {WorkWorkInTeam} over anything else",
+                                "{WorkWorkInTeam} of cource",
+                                "I prefer working in a {WorkWorkInTeam}",
+                                "I like to work in a {WorkWorkInTeam}",
+                                "I'd rather work in a {WorkWorkInTeam}",
+                                "I prefer to work in a {WorkWorkInTeam}",
+                                "{WorkWorkInTeam} is better",
+                                "I like to work {WorkWorkInTeam}",
+                                "I'd rather work {WorkWorkInTeam}",
+                                "I prefer to work {WorkWorkInTeam}",
+                                "{WorkWorkInTeam} "
+                            ]
+                        },
+                        {
+                            "name": "WorkSociallySafeBrNegative",
+                            "type": "AMAZON.SearchQuery"
+                        },
+                        {
+                            "name": "WorkSociallySafeBrNegativeTwo",
+                            "type": "AMAZON.SearchQuery"
+                        },
+                        {
+                            "name": "WorkCurrentWorkBrNegative",
+                            "type": "AMAZON.SearchQuery"
+                        },
+                        {
+                            "name": "WorkCurrentWorkBrNegativeTwo",
+                            "type": "AMAZON.SearchQuery"
+                        },
+                        {
+                            "name": "WorkCurrentWorkBrPositive",
+                            "type": "AMAZON.SearchQuery"
+                        },
+                        {
+                            "name": "WorkWorkInTeamBrNegative",
+                            "type": "AMAZON.SearchQuery"
+                        },
+                        {
+                            "name": "WorkWorkInTeamBrPositive",
+                            "type": "AMAZON.SearchQuery"
+                        },
+                        {
+                            "name": "WorkWorkInTeamBrPositiveTwo",
+                            "type": "AMAZON.SearchQuery"
+                        },
+                        {
+                            "name": "ChildBulliedChild",
+                            "type": "PositiveNegative",
+                            "samples": [
+                                "{ChildBulliedChild} sometimes",
+                                "{ChildBulliedChild} but I did move past it",
+                                "{ChildBulliedChild} do you think I am stupid or something",
+                                "{ChildBulliedChild} I don't think so",
+                                "I think so {ChildBulliedChild}",
+                                "{ChildBulliedChild}",
+                                "I {ChildBulliedChild} got bullied",
+                                "{ChildBulliedChild} I did not",
+                                "{ChildBulliedChild} I didn't",
+                                "{ChildBulliedChild} I did",
+                                "{ChildBulliedChild} I did not get bullied during my childhood",
+                                "{ChildBulliedChild} I didn't get bullied during my childhood",
+                                "{ChildBulliedChild} I did get bullied during my childhood"
+                            ]
+                        },
+                        {
+                            "name": "ChildHappinessSixToTwelve",
+                            "type": "Scales",
+                            "samples": [
+                                "{ChildHappinessSixToTwelve} I had a lot of problems because of my parents",
+                                "I would give it a {ChildHappinessSixToTwelve}",
+                                "I didn't have a good childhood {ChildHappinessSixToTwelve}",
+                                "I did not have a good childhood {ChildHappinessSixToTwelve}",
+                                "I had a bad childhood {ChildHappinessSixToTwelve}",
+                                "I had a good childhood {ChildHappinessSixToTwelve}",
+                                "I was very happy {ChildHappinessSixToTwelve}",
+                                "I feel about a {ChildHappinessSixToTwelve}",
+                                "About a {ChildHappinessSixToTwelve}",
+                                "I think about a {ChildHappinessSixToTwelve}",
+                                "{ChildHappinessSixToTwelve}"
+                            ]
+                        },
+                        {
+                            "name": "ChildHappinessTwelveToEighteen",
+                            "type": "Scales",
+                            "samples": [
+                                "Puberty is a bitch {ChildHappinessTwelveToEighteen}",
+                                "I did not have a good childhood {ChildHappinessTwelveToEighteen}",
+                                "I didn't have a good childhood {ChildHappinessTwelveToEighteen}",
+                                "I had a bad childhood {ChildHappinessTwelveToEighteen}",
+                                "I had a good childhood {ChildHappinessTwelveToEighteen}",
+                                "I was very happy {ChildHappinessTwelveToEighteen}",
+                                "{ChildHappinessTwelveToEighteen}",
+                                "About a {ChildHappinessTwelveToEighteen}",
+                                "I feel about a {ChildHappinessTwelveToEighteen}",
+                                "I think about a {ChildHappinessTwelveToEighteen}"
+                            ]
+                        },
+                        {
+                            "name": "ChildBulliedChildBrPositive",
+                            "type": "AMAZON.SearchQuery"
+                        }
+                    ],
+                    "samples": [
+                        "Continue",
+                        "I would like to start",
+                        "I'm ready",
+                        "Start mental intake",
+                        "Start"
+                    ]
+                },
+                {
+                    "name": "ConclusionIntent",
+                    "slots": [],
+                    "samples": [
+                        "I want to hear my conclusion",
+                        "Give me the conclusion",
+                        "I want conclusion",
+                        "I'd like to hear the conclusion",
+                        "Conclusion"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "Scales",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "Five",
+                                "synonyms": [
+                                    "5"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Four",
+                                "synonyms": [
+                                    "4"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Three",
+                                "synonyms": [
+                                    "3"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Two",
+                                "synonyms": [
+                                    "2"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "One",
+                                "synonyms": [
+                                    "1"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "PositiveNegative",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "Negative",
+                                "synonyms": [
+                                    "Not",
+                                    "Nope",
+                                    "Nah",
+                                    "never",
+                                    "don't",
+                                    "not really",
+                                    "Unfortunately not",
+                                    "Zero",
+                                    "None",
+                                    "No"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Positive",
+                                "synonyms": [
+                                    "do",
+                                    "Luckily",
+                                    "Plenty",
+                                    "Yeah",
+                                    "Yes"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "PositiveNegativeWorkTeam",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "Negative",
+                                "synonyms": [
+                                    "depends",
+                                    "alone"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Positive",
+                                "synonyms": [
+                                    "work in team",
+                                    "team work",
+                                    "team",
+                                    "teamwork"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "QuestionsIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "FriendsAnyFriends",
+                            "type": "PositiveNegative",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.231044307183.1089221541706"
+                            }
+                        },
+                        {
+                            "name": "FriendsTimeWithFriends",
+                            "type": "PositiveNegative",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.231044307183.1471417334318"
+                            }
+                        },
+                        {
+                            "name": "FriendsSocialGroup",
+                            "type": "PositiveNegative",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.231044307183.1175924692205"
+                            }
+                        },
+                        {
+                            "name": "FriendsSocialGroupBrPositive",
+                            "type": "AMAZON.SearchQuery",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        },
+                        {
+                            "name": "FriendsAnyFriendsBrNegative",
+                            "type": "AMAZON.SearchQuery",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        },
+                        {
+                            "name": "FriendsTimeWithFriendsBrNegative",
+                            "type": "AMAZON.SearchQuery",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        },
+                        {
+                            "name": "FriendsTimeWithFriendsBrPositive",
+                            "type": "AMAZON.SearchQuery",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        },
+                        {
+                            "name": "FriendsSocialGroupBrPositiveTwo",
+                            "type": "AMAZON.SearchQuery",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        },
+                        {
+                            "name": "WorkSociallySafe",
+                            "type": "Scales",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.231044307183.954476884301"
+                            }
+                        },
+                        {
+                            "name": "WorkCurrentWork",
+                            "type": "Scales",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.231044307183.583821233628"
+                            }
+                        },
+                        {
+                            "name": "WorkWorkInTeam",
+                            "type": "PositiveNegativeWorkTeam",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.231044307183.208668370054"
+                            }
+                        },
+                        {
+                            "name": "WorkSociallySafeBrNegative",
+                            "type": "AMAZON.SearchQuery",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        },
+                        {
+                            "name": "WorkSociallySafeBrNegativeTwo",
+                            "type": "AMAZON.SearchQuery",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        },
+                        {
+                            "name": "WorkCurrentWorkBrNegative",
+                            "type": "AMAZON.SearchQuery",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        },
+                        {
+                            "name": "WorkCurrentWorkBrNegativeTwo",
+                            "type": "AMAZON.SearchQuery",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        },
+                        {
+                            "name": "WorkCurrentWorkBrPositive",
+                            "type": "AMAZON.SearchQuery",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        },
+                        {
+                            "name": "WorkWorkInTeamBrNegative",
+                            "type": "AMAZON.SearchQuery",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        },
+                        {
+                            "name": "WorkWorkInTeamBrPositive",
+                            "type": "AMAZON.SearchQuery",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        },
+                        {
+                            "name": "WorkWorkInTeamBrPositiveTwo",
+                            "type": "AMAZON.SearchQuery",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        },
+                        {
+                            "name": "ChildBulliedChild",
+                            "type": "PositiveNegative",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.882890109013.429367332938"
+                            }
+                        },
+                        {
+                            "name": "ChildHappinessSixToTwelve",
+                            "type": "Scales",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.882890109013.242162414682"
+                            }
+                        },
+                        {
+                            "name": "ChildHappinessTwelveToEighteen",
+                            "type": "Scales",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.882890109013.619735106410"
+                            }
+                        },
+                        {
+                            "name": "ChildBulliedChildBrPositive",
+                            "type": "AMAZON.SearchQuery",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        }
+                    ]
+                }
+            ]
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Slot.566958202781.1271001106444",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "How is the relationship with your father?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.566958202781.305368829440",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "How is the relationship with your mother?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.796293701547.619414871582",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Do you have any friends that you can rely on when in need?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.796293701547.757766477845",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Do you spend a lot of time with your friends?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.796293701547.9489479131",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Does your social group have a negative influence on you?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.394815898506.180394166469",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "On a scale of one to five, where one is bad and five is good, how socially safe do you feel at work?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.394815898506.1221011822878",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "On a scale of one to five, where one is bad and five is good, how much do you like your current study?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.394815898506.99806840694",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Do you find it easy to work in a team, or do you prefer to work alone on projects?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.992795781477.1000016840828",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Did you get bullied during your childhood?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.992795781477.1284357773100",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "On a scale of one to five, where one is bad and five is good, how happy were you when you were six to twelve years old?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.992795781477.381563288265",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "On a scale of one to five, where one is bad and five is good, how happy were you when you were twelve to eighteen years old?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.231044307183.1089221541706",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "The first topic we are going to discuss, are about your social environment. Do you have any friends that you can rely on when in need?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.231044307183.1471417334318",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Do you spend a lot of time with your friends?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.231044307183.1175924692205",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Does your social group have a negative influence on you?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.231044307183.954476884301",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "On a scale of one to five, where one is bad and five is good, how socially safe do you feel at your work ?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.231044307183.583821233628",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "On a scale of one to five, where one is bad and five is good, how much do you like your current job?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.231044307183.208668370054",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Do you find it easy to work in a team, or do you prefer to work alone?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.882890109013.619735106410",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "On a scale of one to five, where one is bad and five is good, how happy were you when you were twelve to eighteen years old?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.882890109013.242162414682",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "On a scale of one to five, where one is bad and five is good, how happy were you when you were six to twelve years old?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.882890109013.429367332938",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Did you get bullied during your childhood?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.123094612893.764746166537",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Do you have a job or are you still in school?"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Slot.333597558933.513643143983",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "That was a {FriendsAnyFriends} answer, right?"
+                    }
+                ]
+            }
+        ]
+    }
+}
